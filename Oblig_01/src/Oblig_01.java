@@ -3,8 +3,23 @@ import java.util.*;
 public class Oblig_01 {
 
     public static void main(String[] args) {
-        System.out.println(Krypter("Karmann-Ghia"));
-        System.out.println(Dekrypter("nXvnueTz-naa"));
+        // Ettersom et av krypterings stegene er å dele ordet i 2
+        // så vil det kun være mulig å produsere strenger med oddetall
+        // bokstaver..
+        Scanner krypter_noe = new Scanner(System.in);
+        System.out.println("Hva vil du kryptere?: ");
+        String input = krypter_noe.nextLine();
+        String kryptert_input = Krypter(input);
+        System.out.println("Din krypterte string: " + kryptert_input);
+        Scanner dekrypter_noe = new Scanner(System.in);
+        System.out.println("Vil du dekryptere stringen? Y/N: ");
+        String input_2 = dekrypter_noe.nextLine().toUpperCase();
+        if (input_2.equals("Y")){
+            System.out.println("Din dekrypterte string: " + Dekrypter(kryptert_input));
+        }
+        else{
+            System.out.println("Synd, du får den likevell: " + Dekrypter(kryptert_input));
+        }
     }
 
     public static String ROT13(String S)
