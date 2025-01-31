@@ -1,7 +1,6 @@
-import java.io.*;
 import java.util.Scanner;
 
-class Oblig_02
+class Oblig_2
 {
     public static void lineær(long n)
     {
